@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+void f(int x) {
+	for (int i = 2; i < x+1; i++) {
+		if (x == 2) cout << "2是素数！";
+		if (i == x) {
+			cout << x << "是素数！";
+			break;
+		}
+		if (x % i == 0) {
+			cout << x << "不是素数！";
+			break;
+		}
+	}
+}
+int main() {
+	int input = 1;
+	while (input != 0) {
+		cout << "请输入一个整数：";
+		cin >> input;
+		f(input);
+		cout << endl;
+	}
+	return 0;
+}
